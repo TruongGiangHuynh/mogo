@@ -1,0 +1,102 @@
+.quote{
+    background-color: $gray-color;
+    padding: 6.5rem 0;
+  
+    &-arrow{
+        color: $gray-dark-color;
+        font-size: 2rem;
+        padding:1rem 2rem;
+        cursor: pointer;
+    }
+  
+    &-content{
+        padding-left: 5.5rem;
+        padding-right: 5.5rem;
+        @include flexbox(center,center);
+    }
+    &-icon{
+        @include size(15rem);
+        @include flexbox(center,center);
+        border:3px solid $third-color;
+        flex-shrink: 0;
+        
+    }
+    &-info{
+        font-size:2.4rem;
+        color:$text-color;
+        font-style: italic;
+        line-height:1.6;
+        font-family: $secondary-font;
+        font-weight:300;
+        margin-left: 6rem;
+    }
+    &-author{
+        font-family: $third-font;
+        font-weight: bold;
+        color: black;
+        padding-left: 7rem;
+        position: relative;
+        &::before{
+            content:"";
+            @include size(6rem,.3rem);
+            background-color: $primary-color;
+            position: absolute;
+            left: 0;
+            top:50%;
+            transform: translateY(-50%);
+        }
+    }
+    &-img{
+        border-radius: 50rem;
+        @include size(22rem);
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+    // slick slider
+    .slick-initialized .slick-slide {
+        display:flex;
+    }
+    .slick-arrow{
+        background-color: transparent;
+        border:0;
+        outline: none;
+        color: $gray-dark-color;
+        font-size: 2rem;
+        padding:1rem 2rem;
+        cursor: pointer;
+        @include absCenter("top");
+        z-index:10;
+
+    }
+    .slick-prev{
+        left:0;
+    }
+    .slick-next{
+        right:0;
+    }
+    @include maxWidth(767px){
+        &-arrow{
+            display: none;
+        }
+        &-content{
+           padding:0;
+            flex-direction: column;
+        }
+        &-desc{
+            display: block;
+        }
+        &-text{
+            text-align: center;
+            @include textclamp(3);
+            justify-content:center;
+        }
+        &-icon{
+            @include size(10rem);
+           
+            max-width: 50%;
+        }
+        &-info{
+            margin-left: 0;
+        }
+    }
+}

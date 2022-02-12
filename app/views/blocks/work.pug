@@ -1,0 +1,36 @@
+section.work 
+    .container 
+        +blockheader("Who we are","Meet ours team","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus fugiat esse maiores eius molestiae possimus architecto rerum delectus. Neque voluptatem odio dolorem sit recusandae quos quaerat dicta ex dolores adipisci!") 
+    .work-list 
+        .work-column 
+            +workItem("../images/img-work1.png")
+            +workItem("../images/img-work2.png")
+           
+        .work-column 
+            +workItem("../images/img-work3.png")
+            +workItem("../images/img-work4.png")
+        .work-column 
+            +workItem("../images/img-work5.png","fa fa-home","work-item--full")
+                
+        .work-column 
+            +workItem("../images/img-work6.png")
+            +workItem("../images/img-work7.png")
+section.quote 
+    .container
+        .quote-container
+            +quoteItem({
+                src:"https://images.unsplash.com/photo-1640622659144-18a1fd885123?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+                type:true,
+                title:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sed amet dicta temporibus fugit, non, quasi atque rerum voluptates voluptate id et ipsa sit aliquid, eaque quae quam corporis quas!",author:"Joshua Early"
+            })
+            +quoteItem({
+                src:"https://images.unsplash.com/photo-1640622842924-3ae860f77265?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxNnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+                type:true,
+                title:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sed amet dicta temporibus fugit, non, quasi atque rerum voluptates voluptate id et ipsa sit aliquid, eaque quae quam corporis quas!",author:"Malai Aka"
+            })
+            +quoteItem({
+                src:"https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+                type:true,
+                title:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sed amet dicta temporibus fugit, non, quasi atque rerum voluptates voluptate id et ipsa sit aliquid, eaque quae quam corporis quas!",author:"John downka"
+            })
+            

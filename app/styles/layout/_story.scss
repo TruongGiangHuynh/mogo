@@ -1,0 +1,109 @@
+.story{
+    padding: 10rem 0;
+    background-color: #fff;
+    &-media{
+        position: relative;
+    }
+    &-list{
+        @include flexbox(stretch,space-between);
+    }
+    &-item{
+        width:calc(33.3333% - 2rem);
+    }
+    &-img{
+        @include size(100%,24rem);
+        object-fit: cover;
+    }
+    &-date{
+       padding: 1.5rem 2rem;
+       @include flexbox(center,center,column);
+       background-color:$third-color;
+       color:white;
+       position: absolute;
+       bottom: 1rem;
+       left:-1rem;z-index: 2;
+       &-number{
+           font-weight: bold;
+           font-size:3rem;
+       }
+       &-text{
+        color:white;
+        font-size: 1.5rem;
+       }
+    }
+    &-title{
+        text-transform: uppercase;
+        font-size:1.4rem;
+        color:$title-color;
+        font-weight:500;
+        line-height: 1.4;
+        padding: 1rem 0;
+    }
+    &-desc{
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        position: relative;
+        border-bottom: 1px solid $border-color;
+     
+    }
+    &-meta{
+        &-icon{
+            color:$third-color;
+            margin-right: .5rem;
+        }
+        @include flexbox(center);
+        &-item{
+            
+            margin-right: 2rem;
+        }
+    }
+    @include maxWidth(1023px){
+        padding:5rem 0;
+        &-date{
+            padding:1rem 1.5rem;
+        }
+        &-desc{
+            font-size:1.3rem;
+           
+            &-iner{
+                @include textclamp(4);
+            }
+        }
+    }
+    @include maxWidth(767px){
+        &-list{
+            display:block;
+        }
+        &-item{
+            width:100%;
+           margin-bottom: 5rem;
+        }
+        &-date{
+            left:-.5rem;
+            bottom:.5rem;
+        }
+    }
+}
+.map{
+    padding:6rem 0;
+    background:linear-gradient(to bottom, rgba(#fff,0.5),rgba(#fff,0.8)),url(../images/img-map.png) no-repeat center/cover;
+    &-content{
+        @include flexbox(center,center,column);
+    }
+    &-title{
+        position: relative;
+        color:$primary-color;
+        font-size:2.4rem;font-weight:bold;
+        padding-bottom: 2rem;
+        text-transform: uppercase;
+        margin-top: 1.5rem;
+        &:before{
+            content:"";
+            @include size(6rem,.3rem);
+            bottom:0;
+            @include absCenter("left");
+            background-color:$primary-color;
+            
+        }
+    }
+}

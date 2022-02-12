@@ -1,0 +1,102 @@
+mixin MenuLink(title="This is default title",href="#")
+  li.header-menu-item
+        a.header-menu-link(href=href)= title
+mixin hbottom(number,text)
+  .header-bottom-item.is-active
+      span.header-bottom-item-number= number
+      span.header-bottom-item-text= text
+mixin blockheader(caption,title,description)
+  .block-box
+    h3.block-box-caption= caption
+    h2.block-box-title= title
+    if (description)
+      p.block-box-description= description
+mixin aboutItem(data) 
+  .about-item 
+    img.about-img(src=data.src)
+    .about-content
+      i.about-icon(class=data.icon) 
+      span.about-title= data.title 
+mixin numberItem(number,caption)
+  .number-item
+    h4.number-item-count= number
+    span.number-item-text= caption 
+mixin serviceItem(src,title,caption)
+  .services-item 
+    img.services-item-icon(src= src)
+    .services-item-info 
+        h4.services-item-info-title= title
+        span.services-item-info-caption= caption
+mixin wedoItem(src,title,text)
+  .wedo-item
+    .wedo-item-header 
+        img.wedo-item-header-icon(src= src)
+        h4.wedo-item-header-title= title
+        i.fas.fa-chevron-down.wedo-item-arrow 
+    .wedo-item-content 
+        .wedo-item-text= text 
+mixin teamSocial(facebook="#", twitter="#",algolia="#",youtube="#")
+  li.team-social-item
+    a.team-social-link(href=facebook)
+      i.fab.fa.fa-facebook-f 
+  li.team-social-item
+    a.team-social-link(href=twitter)
+      i.fab.fa.fa-twitter 
+  li.team-social-item
+    a.team-social-link(href=algolia)
+      i.fab.fa-algolia 
+  li.team-social-item
+    a.team-social-link(href=youtube)
+      i.fab.fa-youtube 
+mixin teamItem(src,name,position)
+  .team-item 
+    .team-main
+      img(src=src).team-picture
+      .team-content 
+        ul.team-social
+          if block 
+            block
+    .team-info 
+      h3.team-name= name
+      span.team-position= position
+mixin workItem(src,icon="fa fa-home",classfull="",title="Createvity Designed ",description="Lorem ipsum dolor sit amet consectetur adipisicing elit.")
+  .work-item(class=classfull)
+    img.work-img(src=src)
+    .work-content 
+      i.work-icon(class=icon) 
+      h3.work-title= title
+      span.work-desc.text.text--light= description
+mixin peopleItem(src,name,job,description)
+  li.people-item
+    img.people-img(src=src)
+    .people-info 
+        h3.people-name= name
+        span.people-job.text.text-light= job 
+        p.people-desc.text= description
+mixin storyItem(src,date,month,title,desc,view,comment)
+  li.story-item 
+    .story-media 
+      img.story-img(src= src)
+      .story-date
+        span.story-date-number.text= date
+        span.story-date-text.text.text--light= month 
+    h3.story-title= title
+    .story-desc.text
+      p.story-desc-iner= desc 
+    .story-meta
+      .story-meta-item 
+        i.fa.fa-eye.story-meta-icon
+        span.story-meta-count= view
+      .story-meta-item 
+        i.fa.fa-comment.story-meta-icon
+        span.story-meta-count= comment
+mixin quoteItem(data)
+  .quote-content
+    if data.type==false 
+      .quote-icon 
+        img(src=data.src)
+    else 
+      img(src=data.src).quote-img 
+    .quote-info
+      p.quote-text= data.title 
+      span.quote-author= data.author
